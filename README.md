@@ -1,5 +1,8 @@
 # L’uso intelligente dei dati facilita il lavoro
 Di seguito saranno riportati tutti gli step di progettazione che hanno portato alla realizzazione di un database per un'azienda.
+La seguente descrizione ha lo scopo di fornire una panoramica generale sul lavoro svolto. Per ulteriori dettagli e approfondimenti invitiamo alla lettura della seguente [relazione](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/Relazione_azienda_scang.pdf).
+Tutto il codice implementato è presente all'interno di questo [file](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/azienda_scang.sql).
+Facendo l'import del file precedente è possibile avere una copia, già popolata, del database che abbiamo realizzato.
 
 ## Analisi dei requisiti
 
@@ -15,3 +18,11 @@ Successivamente alle interviste e alla ricezione dei documenti, dopo un’attent
 ### Dizionario dei termini
 Questo dizionario serve per rendere più comprensibile alcuni termini che verranno utilizzati all’interno della documentazione.
 ![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/dizionario%20termini.png)
+
+### Eliminazione delle ambiguit`a presenti
+Non sono riscontrabili ambiguità che necessitano di ulteriori spiegazioni.
+
+### Strutturazione dei requisiti
+Si dovranno gestire dunque i dati relativi ai fornitori,clienti, dipendenti, commissione del lavoro, e sulla commessa la relativa documentazione,bisogna anche gestire i dati relativi alla contabilità.
+
+## Progettazione Concettuale
