@@ -14,4 +14,4 @@ Successivamente alle interviste e alla ricezione dei documenti, dopo un’attent
 
 ### Dizionario dei termini
 Questo dizionario serve per rendere più comprensibile alcuni termini che verranno utilizzati all’interno della documentazione.
-![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/Analisi%20dei%20processi%20interni.pdf)
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/dizionario%20termini.png)
