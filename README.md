@@ -26,3 +26,14 @@ Non sono riscontrabili ambiguità che necessitano di ulteriori spiegazioni.
 Si dovranno gestire dunque i dati relativi ai fornitori,clienti, dipendenti, commissione del lavoro, e sulla commessa la relativa documentazione,bisogna anche gestire i dati relativi alla contabilità.
 
 ## Progettazione Concettuale
+In questa fase si è proceduto a descrivere le modalità con cui si intende progedere allo sviluppo del progetto. Nel caso di questo progetto si è proceduto a scegliere un approccio ibrido tra Top-Down e Bottom-Up.
+
+### Identificazione delle entità e delle relazioni fondamentali
+In questa fase del progetto si è proceduto all'identificazione delle entità e delle relazioni fondamentali.
+Si è individuato:
+1. Bilancio mensile
+2. Dipendente
+3. Commessa
+4. Cliente
+
+### Schema dello scheletro
