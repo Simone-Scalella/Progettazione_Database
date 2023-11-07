@@ -37,3 +37,10 @@ Si è individuato:
 4. Cliente
 
 ### Schema dello scheletro
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/scheletro.png)
+
+### Sviluppo delle componenti dello scheletro
+In questa fase si è proceduto a sviluppare le componenti presenti nello schema precedente.
+
+### Schema generale
+
