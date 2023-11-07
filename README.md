@@ -55,4 +55,54 @@ Successivamente, sono state eliminate le gerarchie e si è proceduto con la fase
 Infine, sono stati sostituiti gli attributi composti.
 
 ### Schema finale
-![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/Schema%20generale.png)
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/Schema%20finale.png)
+
+### Traduzione verso il linguaggio relazionale
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/traduzione.png)
+
+## Codifica SQL e testing
+In questa fase, conclusiva del progetto, si è proceduto a implementare fisicamente il database.
+Dopo l'implementazione, per verificare l'assenza di bug e altre problematiche, sono stati eseguiti una serie di test.
+
+### Esempio di implementazione del DB in SQL
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/SQL_example.png)
+
+### Risoluzione di problematiche e miglioramenti.
+Alcuni vincoli, richiesti per questo database, non potevano essere implementati con l'istruzione CHECK. E' stato necessario l'utilizzo dei TRIGGER.
+```SQL
+delimiter $$
+create trigger Controllo_data_transtip
+after update
+on TransStip for each row
+begin
+if((select DataEsecuzione from UscitaEffettuata
+where ID = new.IDTran) < new.DataStip)
+then
+signal sqlstate ’45000’ set message_text = ’non puoi inserire una data di
+pagamento piu’’ piccola di quella dell’’uscita’’.’;
+end if;
+end $$
+delimiter ;
+```
+
+Per velocizzare alcune operazioni si è deciso di implementare delle procedure, in questo modo basta inserire i valori degli attributi all’interno della chiamata alla procedura e si ottiene il risultato desiderato. Di seguito ne riportiamo un esempio.
+
+```SQL
+delimiter $$
+CREATE PROCEDURE insert_stip(Dip varchar(20),data_stip date,Orelavoro decimal(5,2),
+OrStraordinario decimal(5,2),GiorniFerie decimal(4,2))
+BEGIN
+INSERT INTO stipendio (DataStip,Dip,OrLavoro,OrStraordinario,GiorniFerie,importo)
+SELECT data_stip,Dip,Orelavoro, OrStraordinario ,GiorniFerie,
+Orelavoro*ImpOrRegolare+OrStraordinario*ImpOrStraordinario+GiorniFerie*ImpOrFeriale
+FROM Dipendente
+WHERE CF = Dip;
+END$$
+delimiter ;
+```
+
+Questo è l'esempio di chiamata:
+```SQL
+CALL insert_stip(<Dipedente>,<DataStipendio>,<Ore di lavoro regolare>,<Straordinario>,<Giorni
+di ferie>);
+```
