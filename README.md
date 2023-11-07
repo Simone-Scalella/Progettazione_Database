@@ -43,4 +43,16 @@ Si è individuato:
 In questa fase si è proceduto a sviluppare le componenti presenti nello schema precedente.
 
 ### Schema generale
+In rosso sono evidenziati gli attributi che possono essere derivati dagli attributi di altre entità.
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/Schema%20generale.png)
 
+## Progettazione logica
+
+### Ristrutturazione dello schema concettuale
+In questa fase si è proceduto a ristrutturare lo schema concettuale, utilizzando le tavole dei volumi e delle operazioni.
+Si vogliono valutare le operazioni previste e capire se certe informazioni derivabili dal nostro schema siano particolarmente interessate in termini di accessi e di costi computazionali e possa risultare utile introdurre altre ridondanze oppure eliminarle, col fine di ridurre tali parametri e migliorare la funzionalità della nostra base di dati.
+Successivamente, sono state eliminate le gerarchie e si è proceduto con la fase di accorpamento e partizionamento dei concetti.
+Infine, sono stati sostituiti gli attributi composti.
+
+### Schema finale
+![alt text](https://github.com/Simone-Scalella/Progettazione_Database/blob/main/image/Schema%20generale.png)
